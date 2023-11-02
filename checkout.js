@@ -96,7 +96,18 @@ const calculateCartPrice=()=>{
     console.log(totalPrice);
 
     document.querySelector(".main__total h2").innerText = subtotal.toFixed(2);
+    //#cart-shipping span:nth-child(2) cart-shipping içindeki 2. spanin innerText i
     document.querySelector("#cart-shipping span:nth-child(2)").innerText = shippingPrice.toFixed(2);
     document.querySelector("#cart-tax span:nth-child(2)").innerText = taxPrice.toFixed(2);
     document.querySelector("#cart-total").lastElementChild.innerText = totalPrice;
+
+    if(productList.querySelectorAll(".main__product").length == 0){
+        productList.innerText = "No Product!";
+        productList.classList.add("no__product")
+        navbarList.firstElementChild.innerText = "My Cart";
+    }
+    else{
+        navbarList.firstElementChild.innerText = `My Cart (${productList.querySelectorAll(".main__product").length} Products)`;
+    }
+
 }

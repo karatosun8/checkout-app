@@ -220,6 +220,15 @@ span {
   content: " $";
 }
 
+.no__product {
+  color: red;
+  font-size: 32px;
+  text-align: center;
+  padding: 50px;
+  background-color: #caa27f;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 1150px) {
   .nav__list {
     padding: 0rem 1rem;
